@@ -10,8 +10,9 @@ collections:
   - label: "Warm Circle, Hard Shield"
     name: "warm-circle"
     create: true
-    folder: "src/markdown/exhibition-data"
+    folder: "src/markdown"
     filter: { field: "exhibition-title", value: "Warm Circle, Hard Shield" }
+    identifier-field: "{{exhibition-title}}_{{title}}"
     widget: "list"
     fields:
       - { label: "Image", name: "image", widget: "image", required: true }
@@ -62,8 +63,9 @@ collections:
   - label: "HerDeepness"
     name: "her-deepness"
     create: true
-    folder: "src/markdown/exhibition-data"
+    folder: "src/markdown"
     filter: { field: "exhibition-title", value: "HerDeepness" }
+    identifier-field: "{{exhibition-title}}_{{title}}"
     widget: "list"
     fields:
       - { label: "Image", name: "image", widget: "image", required: true }
@@ -114,7 +116,7 @@ collections:
   - label: "Markers"
     name: "markers"
     create: true
-    folder: "src/markdown/exhibition-data"
+    folder: "src/markdown"
     filter: { field: "exhibition-title", value: "Markers" }
     widget: "list"
     fields:
@@ -166,7 +168,7 @@ collections:
   - label: "Psychopompopolis"
     name: "psychopompopolis"
     create: true
-    folder: "src/markdown/exhibition-data"
+    folder: "src/markdown"
     filter: { field: "exhibition-title", value: "Psychopompopolis" }
     widget: "list"
     fields:
@@ -218,7 +220,7 @@ collections:
   - label: "Dylan"
     name: "dylan"
     create: true
-    folder: "src/markdown/exhibition-data"
+    folder: "src/markdown"
     filter: { field: "exhibition-title", value: "Dylan" }
     widget: "list"
     fields:
@@ -270,7 +272,7 @@ collections:
   - label: "Petrichor"
     name: "petrichor"
     create: true
-    folder: "src/markdown/exhibition-data"
+    folder: "src/markdown"
     filter: { field: "exhibition-title", value: "Petrichor" }
     widget: "list"
     fields:
@@ -319,7 +321,7 @@ collections:
       - label: "Information Page"
         name: "info"
         create: true
-        file: "src/markdown/page-data/info.md"
+        file: "src/markdown/info.md"
         fields:
           - {
               label: "Information Page Content",
@@ -329,7 +331,7 @@ collections:
       - label: "Contact Page"
         create: true
         name: "contact-page"
-        file: "src/markdown/page-data/contact.md"
+        file: "src/markdown/contact.md"
         fields:
           - {
               label: "Contact Page Content",
