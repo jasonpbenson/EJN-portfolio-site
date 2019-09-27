@@ -1,0 +1,348 @@
+backend:
+  name: github
+  repo: jasonpbenson/EJN-portfolio-site
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - label: "Warm Circle, Hard Shield"
+    name: "warm-circle"
+    folder: "src/exhibition-data"
+    filter: { field: "exhibition-title", value: "Warm Circle, Hard Shield" }
+    widget: "list"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "Image Description",
+          hint: "required for screen readers",
+          name: "image-alt",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Materials",
+          name: "artwork-materials",
+          widget: "sring",
+          required: false,
+        }
+      - {
+          label: "Exhibition Title",
+          hint: "important for filtering exhibitions",
+          name: "exhibition-title",
+          widget: "select",
+          options:
+            [
+              "Warm Circle, Hard Shield",
+              "HerDeepness",
+              "Markers",
+              "Psychopompopolis",
+              "Dylan",
+              "Petrichor",
+            ],
+          required: true,
+        }
+      - { label: "Venue", name: "venue", widget: "string", required: true }
+      - {
+          label: "Exhibition Year",
+          name: "exhibition-year",
+          widget: "datetime",
+          format: "YYYY",
+        }
+  - label: "HerDeepness"
+    name: "her-deepness"
+    folder: "src/exhibition-data"
+    filter: { field: "exhibition-title", value: "HerDeepness" }
+    widget: "list"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "Image Description",
+          hint: "required for screen readers",
+          name: "image-alt",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Materials",
+          name: "artwork-materials",
+          widget: "sring",
+          required: false,
+        }
+      - {
+          label: "Exhibition Title",
+          hint: "important for filtering exhibitions",
+          name: "exhibition-title",
+          widget: "select",
+          options:
+            [
+              "Warm Circle, Hard Shield",
+              "HerDeepness",
+              "Markers",
+              "Psychopompopolis",
+              "Dylan",
+              "Petrichor",
+            ],
+          required: true,
+        }
+      - { label: "Venue", name: "venue", widget: "string", required: true }
+      - {
+          label: "Exhibition Year",
+          name: "exhibition-year",
+          widget: "datetime",
+          format: "YYYY",
+        }
+  - label: "Markers"
+    name: "markers"
+    folder: "src/exhibition-data"
+    filter: { field: "exhibition-title", value: "Markers" }
+    widget: "list"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "Image Description",
+          hint: "required for screen readers",
+          name: "image-alt",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Materials",
+          name: "artwork-materials",
+          widget: "sring",
+          required: false,
+        }
+      - {
+          label: "Exhibition Title",
+          hint: "important for filtering exhibitions",
+          name: "exhibition-title",
+          widget: "select",
+          options:
+            [
+              "Warm Circle, Hard Shield",
+              "HerDeepness",
+              "Markers",
+              "Psychopompopolis",
+              "Dylan",
+              "Petrichor",
+            ],
+          required: true,
+        }
+      - { label: "Venue", name: "venue", widget: "string", required: true }
+      - {
+          label: "Exhibition Year",
+          name: "exhibition-year",
+          widget: "datetime",
+          format: "YYYY",
+        }
+  - label: "Psychopompopolis"
+    name: "psychopompopolis"
+    folder: "src/exhibition-data"
+    filter: { field: "exhibition-title", value: "Psychopompopolis" }
+    widget: "list"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "Image Description",
+          hint: "required for screen readers",
+          name: "image-alt",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Materials",
+          name: "artwork-materials",
+          widget: "sring",
+          required: false,
+        }
+      - {
+          label: "Exhibition Title",
+          hint: "important for filtering exhibitions",
+          name: "exhibition-title",
+          widget: "select",
+          options:
+            [
+              "Warm Circle, Hard Shield",
+              "HerDeepness",
+              "Markers",
+              "Psychopompopolis",
+              "Dylan",
+              "Petrichor",
+            ],
+          required: true,
+        }
+      - { label: "Venue", name: "venue", widget: "string", required: true }
+      - {
+          label: "Exhibition Year",
+          name: "exhibition-year",
+          widget: "datetime",
+          format: "YYYY",
+        }
+  - label: "Dylan"
+    name: "dylan"
+    folder: "src/exhibition-data"
+    filter: { field: "exhibition-title", value: "Dylan" }
+    widget: "list"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "Image Description",
+          hint: "required for screen readers",
+          name: "image-alt",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Materials",
+          name: "artwork-materials",
+          widget: "sring",
+          required: false,
+        }
+      - {
+          label: "Exhibition Title",
+          hint: "important for filtering exhibitions",
+          name: "exhibition-title",
+          widget: "select",
+          options:
+            [
+              "Warm Circle, Hard Shield",
+              "HerDeepness",
+              "Markers",
+              "Psychopompopolis",
+              "Dylan",
+              "Petrichor",
+            ],
+          required: true,
+        }
+      - { label: "Venue", name: "venue", widget: "string", required: true }
+      - {
+          label: "Exhibition Year",
+          name: "exhibition-year",
+          widget: "datetime",
+          format: "YYYY",
+        }
+  - label: "Psychopompopolis"
+    name: "psychopompopolis"
+    folder: "src/exhibition-data"
+    filter: { field: "exhibition-title", value: "Psychopompopolis" }
+    widget: "list"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "Image Description",
+          hint: "required for screen readers",
+          name: "image-alt",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Materials",
+          name: "artwork-materials",
+          widget: "sring",
+          required: false,
+        }
+      - {
+          label: "Exhibition Title",
+          hint: "important for filtering exhibitions",
+          name: "exhibition-title",
+          widget: "select",
+          options:
+            [
+              "Warm Circle, Hard Shield",
+              "HerDeepness",
+              "Markers",
+              "Psychopompopolis",
+              "Dylan",
+              "Petrichor",
+            ],
+          required: true,
+        }
+      - { label: "Venue", name: "venue", widget: "string", required: true }
+      - {
+          label: "Exhibition Year",
+          name: "exhibition-year",
+          widget: "datetime",
+          format: "YYYY",
+        }
+  - label: "Petrichor"
+    name: "petrichor"
+    folder: "src/exhibition-data"
+    filter: { field: "exhibition-title", value: "Petrichor" }
+    widget: "list"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - {
+          label: "Image Description",
+          hint: "required for screen readers",
+          name: "image-alt",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Materials",
+          name: "artwork-materials",
+          widget: "sring",
+          required: false,
+        }
+      - {
+          label: "Exhibition Title",
+          hint: "important for filtering exhibitions",
+          name: "exhibition-title",
+          widget: "select",
+          options:
+            [
+              "Warm Circle, Hard Shield",
+              "HerDeepness",
+              "Markers",
+              "Psychopompopolis",
+              "Dylan",
+              "Petrichor",
+            ],
+          required: true,
+        }
+      - { label: "Venue", name: "venue", widget: "string", required: true }
+      - {
+          label: "Exhibition Year",
+          name: "exhibition-year",
+          widget: "datetime",
+          format: "YYYY",
+        }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Information Page"
+        name: "info"
+        file: "src/page-data/info.md"
+        fields:
+          - {
+              label: "Information Page Content",
+              name: "info-content",
+              widget: "markdown",
+            }
+      - label: "Contact Page"
+        name: "contact-page"
+        file: "src/page-data/contact.md"
+        fields:
+          - {
+              label: "Contact Page Content",
+              name: "contact-content",
+              widget: "markdown",
+            }
+          - label: "Email Contacts"
+            name: "email-contact"
+            widget: "list"
+            fields:
+              - {
+                  label: "Contact Name",
+                  name: "contact-name",
+                  widget: "string",
+                }
+              - { label: "Email", name: "name", widget: "string" }
