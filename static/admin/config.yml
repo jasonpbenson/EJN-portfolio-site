@@ -6,13 +6,18 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections:
   - label: "Warm Circle, Hard Shield"
     name: "warm-circle"
     create: true
     folder: "src/markdown"
     filter: { field: "exhibition-title", value: "Warm Circle, Hard Shield" }
-    identifier-field: "{{exhibition-title}}_{{title}}"
+    slug: "{{exhibition-title}}_{{title}}"
     widget: "list"
     fields:
       - { label: "Image", name: "image", widget: "image", required: true }
@@ -65,7 +70,7 @@ collections:
     create: true
     folder: "src/markdown"
     filter: { field: "exhibition-title", value: "HerDeepness" }
-    identifier-field: "{{exhibition-title}}_{{title}}"
+    slug: "{{exhibition-title}}_{{title}}"
     widget: "list"
     fields:
       - { label: "Image", name: "image", widget: "image", required: true }
@@ -118,6 +123,7 @@ collections:
     create: true
     folder: "src/markdown"
     filter: { field: "exhibition-title", value: "Markers" }
+    slug: "{{exhibition-title}}_{{title}}"
     widget: "list"
     fields:
       - { label: "Image", name: "image", widget: "image", required: true }
@@ -155,7 +161,7 @@ collections:
           label: "Venue",
           name: "venue",
           widget: "string",
-          default: "[Various]",
+          default: "Various",
           required: true,
         }
       - {
@@ -170,6 +176,7 @@ collections:
     create: true
     folder: "src/markdown"
     filter: { field: "exhibition-title", value: "Psychopompopolis" }
+    slug: "{{exhibition-title}}_{{title}}"
     widget: "list"
     fields:
       - { label: "Image", name: "image", widget: "image", required: true }
@@ -222,6 +229,7 @@ collections:
     create: true
     folder: "src/markdown"
     filter: { field: "exhibition-title", value: "Dylan" }
+    slug: "{{exhibition-title}}_{{title}}"
     widget: "list"
     fields:
       - { label: "Image", name: "image", widget: "image", required: true }
@@ -274,6 +282,7 @@ collections:
     create: true
     folder: "src/markdown"
     filter: { field: "exhibition-title", value: "Petrichor" }
+    slug: "{{exhibition-title}}_{{title}}"
     widget: "list"
     fields:
       - { label: "Image", name: "image", widget: "image", required: true }
