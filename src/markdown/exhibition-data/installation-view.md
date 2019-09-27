@@ -1,6 +1,6 @@
 ---
 image: /img/basel3.jpg
-image-alt: 'installation view – art fair booth; Basel, Switzerland'
+image-alt: 'installation view – art fair booth; Art Basel, Statements'
 title: Installation View
 id: WCHS0001
 exhibition-title: 'Warm Circle, Hard Shield'
