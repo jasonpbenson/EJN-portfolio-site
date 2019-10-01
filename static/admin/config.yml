@@ -8,59 +8,70 @@ public_folder: /img
 slug:
   encoding: "ascii"
   clean_accents: true
-  sanitize_replacement: "_"
+  sanitize_replacement: "-"
 
 collections:
   - label: "Exhibitions"
-  - name: "exhibitions"
-  - create: true
-  - folder: "src/markdown/exhibition-data"
-  - slug: "{{exhibition-title}-{artwork-title}}"
-  - fields:
+    name: "exhibitions"
+    create: true
+    folder: "src/markdown/exhibition-data"
+    slug: "{{title}-{artwork-title}}"
+    fields:
       - {
           label: "Exhibition Title",
-          name: "exhibition-title",
+          name: "title",
           widget: "string",
           required: true,
         }
       - { label: "Venue", name: "venue", widget: "string", required: true }
       - { label: "Year", name: "year", widget: "string", required: true }
-      - { label: "Images", name: "images", widget: "list" }
-      - fields:
-          - { label: "Image", name: "image", widget: "image", required: true }
-          - {
-              label: "Image Description",
-              hint: "required for screen readers",
-              name: "image-alt",
-              widget: "string",
-              required: true,
-            }
-          - {
-              label: "Title",
-              name: "artwork-title",
-              widget: "string",
-              required: true,
-            }
-          - {
-              label: "ID",
-              name: "id",
-              widget: "string",
-              default: "WCHS0000",
-              hint: "number entries with consistent naming convention; each entry MUST be unique",
-              required: true,
-            }
-          - {
-              label: "Materials",
-              name: "artwork-materials",
-              widget: "string",
-              required: false,
-            }
+      - {
+          label: "Exhibition Images",
+          name: "exhibition-images",
+          widget: "list",
+          fields:
+            [
+              {
+                label: "Title",
+                name: "artwork-title",
+                widget: "string",
+                required: true,
+              },
+              {
+                label: "Image",
+                name: "image",
+                widget: "image",
+                required: true,
+              },
+              {
+                label: "Image Description",
+                hint: "required for screen readers",
+                name: "image-alt",
+                widget: "string",
+                required: true,
+              },
+              {
+                label: "ID",
+                name: "id",
+                widget: "string",
+                default: "XXX-0000",
+                hint: "each entry MUST be unique",
+                required: true,
+              },
+              {
+                label: "Materials",
+                name: "artwork-materials",
+                widget: "string",
+                required: false,
+              },
+            ],
+          required: true,
+        }
   - label: "Pages"
     name: "pages"
     files:
       - label: "Information Page"
         name: "info"
-        create: true
         file: "src/markdown/pages-data/info.md"
         fields:
           - {
@@ -69,7 +80,6 @@ collections:
               widget: "markdown",
             }
       - label: "Contact Page"
-        create: true
         name: "contact-page"
         file: "src/markdown/pages-data/contact.md"
         fields:
