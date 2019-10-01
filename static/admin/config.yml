@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: jasonpbenson/EJN-portfolio-site
+  name: git-gateway
   branch: master
 
 media_folder: static/img
@@ -12,325 +11,57 @@ slug:
   sanitize_replacement: "_"
 
 collections:
-  - label: "Warm Circle, Hard Shield"
-    name: "warm-circle"
-    create: true
-    folder: "src/markdown"
-    filter: { field: "exhibition-title", value: "Warm Circle, Hard Shield" }
-    slug: "{{exhibition-title}}_{{title}}"
-    widget: "list"
-    fields:
-      - { label: "Image", name: "image", widget: "image", required: true }
-      - {
-          label: "Image Description",
-          hint: "required for screen readers",
-          name: "image-alt",
-          widget: "string",
-          required: true,
-        }
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "ID",
-          name: "id",
-          widget: "string",
-          default: "WCHS0000",
-          hint: "number entries with consistent naming convention; each entry MUST be unique",
-          required: true,
-        }
-      - {
-          label: "Materials",
-          name: "artwork-materials",
-          widget: "string",
-          required: false,
-        }
+  - label: "Exhibitions"
+  - name: "exhibitions"
+  - create: true
+  - folder: "src/markdown/exhibition-data"
+  - slug: "{{exhibition-title}-{artwork-title}}"
+  - fields:
       - {
           label: "Exhibition Title",
-          hint: "important for filtering exhibitions",
           name: "exhibition-title",
           widget: "string",
-          default: "Warm Circle, Hard Shield",
-          required: true,
-        }
-      - {
-          label: "Venue",
-          name: "venue",
-          widget: "string",
-          default: "Art Basel, Statements",
-          required: true,
-        }
-      - {
-          label: "Exhibition Year",
-          name: "exhibition-year",
-          widget: "string",
-          default: "2019",
-          required: true,
-        }
-  - label: "HerDeepness"
-    name: "her-deepness"
-    create: true
-    folder: "src/markdown"
-    filter: { field: "exhibition-title", value: "HerDeepness" }
-    slug: "{{exhibition-title}}_{{title}}"
-    widget: "list"
-    fields:
-      - { label: "Image", name: "image", widget: "image", required: true }
-      - {
-          label: "Image Description",
-          hint: "required for screen readers",
-          name: "image-alt",
-          widget: "string",
-          required: true,
-        }
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "ID",
-          name: "id",
-          widget: "string",
-          default: "HD0000",
-          hint: "number entries with consistent naming convention; each entry MUST be unique",
-          required: true,
-        }
-      - {
-          label: "Materials",
-          name: "artwork-materials",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Exhibition Title",
-          hint: "important for filtering exhibitions",
-          name: "exhibition-title",
-          widget: "string",
-          default: "HerDeepness",
-          required: true,
-        }
-      - {
-          label: "Venue",
-          name: "venue",
-          widget: "string",
-          default: "Atlanta Contemporary Art Center",
-          required: true,
-        }
-      - {
-          label: "Exhibition Year",
-          name: "exhibition-year",
-          widget: "string",
-          default: "2019",
-          required: true,
-        }
-  - label: "Markers"
-    name: "markers"
-    create: true
-    folder: "src/markdown"
-    filter: { field: "exhibition-title", value: "Markers" }
-    slug: "{{exhibition-title}}_{{title}}"
-    widget: "list"
-    fields:
-      - { label: "Image", name: "image", widget: "image", required: true }
-      - {
-          label: "Image Description",
-          hint: "required for screen readers",
-          name: "image-alt",
-          widget: "string",
-          required: true,
-        }
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "ID",
-          name: "id",
-          widget: "string",
-          default: "MKR0000",
-          hint: "number entries with consistent naming convention; each entry MUST be unique",
-          required: true,
-        }
-      - {
-          label: "Materials",
-          name: "artwork-materials",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Exhibition Title",
-          hint: "important for filtering exhibitions",
-          name: "exhibition-title",
-          widget: "string",
-          default: "Markers",
-          required: true,
-        }
-      - {
-          label: "Venue",
-          name: "venue",
-          widget: "string",
-          default: "Various",
-          required: true,
-        }
-      - {
-          label: "Exhibition Year",
-          name: "exhibition-year",
-          widget: "string",
-          default: "2018",
-          required: true,
-        }
-  - label: "Psychopompopolis"
-    name: "psychopompopolis"
-    create: true
-    folder: "src/markdown"
-    filter: { field: "exhibition-title", value: "Psychopompopolis" }
-    slug: "{{exhibition-title}}_{{title}}"
-    widget: "list"
-    fields:
-      - { label: "Image", name: "image", widget: "image", required: true }
-      - {
-          label: "Image Description",
-          hint: "required for screen readers",
-          name: "image-alt",
-          widget: "string",
-          required: true,
-        }
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "ID",
-          name: "id",
-          widget: "string",
-          default: "PSY0000",
-          hint: "number entries with consistent naming convention; each entry MUST be unique",
-          required: true,
-        }
-      - {
-          label: "Materials",
-          name: "artwork-materials",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Exhibition Title",
-          hint: "important for filtering exhibitions",
-          name: "exhibition-title",
-          widget: "string",
-          default: "Psychopompopolis",
-          required: true,
-        }
-      - {
-          label: "Venue",
-          name: "venue",
-          widget: "string",
-          default: "Document",
-          required: true,
-        }
-      - {
-          label: "Exhibition Year",
-          name: "exhibition-year",
-          widget: "string",
-          default: "2017",
-          required: true,
-        }
-  - label: "Dylan"
-    name: "dylan"
-    create: true
-    folder: "src/markdown"
-    filter: { field: "exhibition-title", value: "Dylan" }
-    slug: "{{exhibition-title}}_{{title}}"
-    widget: "list"
-    fields:
-      - { label: "Image", name: "image", widget: "image", required: true }
-      - {
-          label: "Image Description",
-          hint: "required for screen readers",
-          name: "image-alt",
-          widget: "string",
-          required: true,
-        }
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "ID",
-          name: "id",
-          widget: "string",
-          default: "DLN0000",
-          hint: "number entries with consistent naming convention; each entry MUST be unique",
-          required: true,
-        }
-      - {
-          label: "Materials",
-          name: "artwork-materials",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Exhibition Title",
-          hint: "important for filtering exhibitions",
-          name: "exhibition-title",
-          widget: "string",
-          default: "Dylan",
-          required: true,
-        }
-      - {
-          label: "Venue",
-          name: "venue",
-          widget: "string",
-          default: "Hester",
-          required: true,
-        }
-      - {
-          label: "Exhibition Year",
-          name: "exhibition-year",
-          widget: "string",
-          default: "2015",
-          required: true,
-        }
-  - label: "Petrichor"
-    name: "petrichor"
-    create: true
-    folder: "src/markdown"
-    filter: { field: "exhibition-title", value: "Petrichor" }
-    slug: "{{exhibition-title}}_{{title}}"
-    widget: "list"
-    fields:
-      - { label: "Image", name: "image", widget: "image", required: true }
-      - {
-          label: "Image Description",
-          hint: "required for screen readers",
-          name: "image-alt",
-          widget: "string",
-          required: true,
-        }
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "ID",
-          name: "id",
-          widget: "string",
-          default: "PTR0000",
-          hint: "number entries with consistent naming convention; each entry MUST be unique",
-          required: true,
-        }
-      - {
-          label: "Materials",
-          name: "artwork-materials",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Exhibition Title",
-          hint: "important for filtering exhibitions",
-          name: "exhibition-title",
-          widget: "string",
-          default: "Petrichor",
           required: true,
         }
       - { label: "Venue", name: "venue", widget: "string", required: true }
-      - {
-          label: "Exhibition Year",
-          name: "exhibition-year",
-          widget: "string",
-          default: "2015",
-          required: true,
-        }
+      - { label: "Year", name: "year", widget: "string", required: true }
+      - { label: "Images", name: "images", widget: "list" }
+      - fields:
+          - { label: "Image", name: "image", widget: "image", required: true }
+          - {
+              label: "Image Description",
+              hint: "required for screen readers",
+              name: "image-alt",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Title",
+              name: "artwork-title",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "ID",
+              name: "id",
+              widget: "string",
+              default: "WCHS0000",
+              hint: "number entries with consistent naming convention; each entry MUST be unique",
+              required: true,
+            }
+          - {
+              label: "Materials",
+              name: "artwork-materials",
+              widget: "string",
+              required: false,
+            }
   - label: "Pages"
     name: "pages"
     files:
       - label: "Information Page"
         name: "info"
         create: true
-        file: "src/markdown/info.md"
+        file: "src/markdown/pages-data/info.md"
         fields:
           - {
               label: "Information Page Content",
@@ -340,7 +71,7 @@ collections:
       - label: "Contact Page"
         create: true
         name: "contact-page"
-        file: "src/markdown/contact.md"
+        file: "src/markdown/pages-data/contact.md"
         fields:
           - {
               label: "Contact Page Content",
