@@ -15,7 +15,7 @@ collections:
     name: "exhibitions"
     create: true
     folder: "src/markdown/exhibition-data"
-    slug: "{{title}-{artwork-title}}"
+    slug: "{{year}}-{{slug}}"
     fields:
       - {
           label: "Exhibition Title",
