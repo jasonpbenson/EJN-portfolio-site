@@ -11,14 +11,14 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/markdown/exhibition-data`,
+        path: `${__dirname}/src/pages/markdown/exhibition-pages-data`,
         name: "markdown-exhibition-data",
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/markdown/pages-data`,
+        path: `${__dirname}/src/pages/markdown/information-pages-data`,
         name: "markdown-page-data",
       },
     },

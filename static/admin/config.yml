@@ -14,7 +14,7 @@ collections:
   - label: "Exhibitions"
     name: "exhibitions"
     create: true
-    folder: "src/markdown/exhibition-data"
+    folder: "src/pages/markdown/exhibition-pages-data"
     slug: "{{year}}-{{slug}}"
     fields:
       - {
@@ -64,19 +64,27 @@ collections:
                 widget: "string",
                 required: false,
               },
+              {
+                label: "ID",
+                name: "id",
+                widget: "string",
+                default: "IMG0000",
+                hint: "each entry MUST be unique",
+                required: true,
+              },
             ],
           required: true,
         }
   - label: "Pages"
     name: "pages"
     files:
-      - label: "Information Page"
-        name: "info"
-        file: "src/markdown/pages-data/info.md"
+      - label: "About Page"
+        name: "about"
+        file: "src/markdown/pages/information-pages-data/about.md"
         fields:
           - {
-              label: "Information Page Content",
-              name: "info-content",
+              label: "About Page Content",
+              name: "about-content",
               widget: "markdown",
             }
       - label: "Contact Page"
