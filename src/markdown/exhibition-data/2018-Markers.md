@@ -1,16 +1,17 @@
 ---
 title: Markers
-venue: 'Various Locations '
-year: '2018'
+venue: "Various Locations "
+year: "2018"
+id: MKRS-2018
 exhibition-images:
   - artwork-title: SheSalt
     id: MKRS0000
     image: /img/cmarker-26.jpg
-    image-alt: 'artwork image – ceramic wall work with collage '
+    image-alt: "artwork image – ceramic wall work with collage "
   - artwork-title: Daufuskie Muscat
     id: MKRS0001
     image: /img/cmarker-1.jpg
-    image-alt: 'artwork image – ceramic wall work with collage '
+    image-alt: "artwork image – ceramic wall work with collage "
   - artwork-title: Badderlocks
     id: MKRS0002
     image: /img/cmarker-21.jpg
@@ -43,11 +44,11 @@ exhibition-images:
     id: MKRS0009
     image: /img/cmarker-5.jpg
     image-alt: artwork image – ceramic wall work with collage
-  - artwork-title: 'Flood Armature '
+  - artwork-title: "Flood Armature "
     id: MKRS0010
     image: /img/cmarker-6.jpg
     image-alt: artwork image – ceramic wall work with collage
-  - artwork-title: 'First Landing Mushrooms '
+  - artwork-title: "First Landing Mushrooms "
     id: MKRS0011
     image: /img/cmarker-7.jpg
     image-alt: artwork image – ceramic wall work with collage
@@ -100,4 +101,3 @@ exhibition-images:
     image: /img/cmarker-19.jpg
     image-alt: artwork image – ceramic wall work with collage
 ---
-

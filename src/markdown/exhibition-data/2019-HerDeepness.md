@@ -1,7 +1,8 @@
 ---
 title: HerDeepness
-venue: 'Atlanta Contemporary '
-year: '2019'
+venue: "Atlanta Contemporary "
+year: "2019"
+id: ACAC-2019
 exhibition-images:
   - artwork-title: Installation View
     id: ACAC0000
@@ -37,10 +38,10 @@ exhibition-images:
     id: ACAC0007
     image: /img/herdeep-11.jpg
     image-alt: artwork image – modified couch and medicinal plants – alt view
-  - artwork-title: 'Installation View '
+  - artwork-title: "Installation View "
     id: ACAC0008
     image: /img/herdeep-14.jpg
-    image-alt: 'installation view at Atlanta Contemporary Art Center '
+    image-alt: "installation view at Atlanta Contemporary Art Center "
   - artwork-title: Installation View
     id: ACAC0009
     image: /img/herdeep-16.jpg
@@ -48,7 +49,7 @@ exhibition-images:
   - artwork-title: Gulf Rose
     id: ACAC0010
     image: /img/herdeep-27.jpg
-    image-alt: 'artwork image – ceramic wall works with wall mural '
+    image-alt: "artwork image – ceramic wall works with wall mural "
   - artwork-title: Gulf Rose
     id: ACAC0011
     image: /img/herdeep-28.jpg
@@ -68,11 +69,11 @@ exhibition-images:
   - artwork-title: Estuary Daisy
     id: ACAC0015
     image: /img/herdeep-19.jpg
-    image-alt: 'artwork image – ceramic wall works with wall mural '
+    image-alt: "artwork image – ceramic wall works with wall mural "
   - artwork-title: Estuary Daisy
     id: ACAC0016
     image: /img/herdeep-20.jpg
-    image-alt: 'artwork image – ceramic wall works with wall mural '
+    image-alt: "artwork image – ceramic wall works with wall mural "
   - artwork-title: Raccoona Charon
     id: ACAC0017
     image: /img/herdeep-32.jpg
@@ -84,4 +85,3 @@ exhibition-images:
       artwork image – large banner – pigment prints on silk and cotton – detail
       view
 ---
-

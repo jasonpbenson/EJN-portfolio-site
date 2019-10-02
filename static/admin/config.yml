@@ -26,6 +26,14 @@ collections:
       - { label: "Venue", name: "venue", widget: "string", required: true }
       - { label: "Year", name: "year", widget: "string", required: true }
       - {
+          label: "ID",
+          name: "id",
+          widget: "string",
+          default: "XXXX-0000",
+          hint: "each entry MUST be unique",
+          required: true,
+        }
+      - {
           label: "Exhibition Images",
           name: "exhibition-images",
           widget: "list",
@@ -48,14 +56,6 @@ collections:
                 hint: "required for screen readers",
                 name: "image-alt",
                 widget: "string",
-                required: true,
-              },
-              {
-                label: "ID",
-                name: "id",
-                widget: "string",
-                default: "XXX-0000",
-                hint: "each entry MUST be unique",
                 required: true,
               },
               {

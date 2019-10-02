@@ -1,25 +1,26 @@
 ---
-title: 'Warm Circle, Hard Shield'
+title: "Warm Circle, Hard Shield"
 venue: Art Basel
-year: '2019'
+year: "2019"
+id: WCHS-2018
 exhibition-images:
   - artwork-title: Installation View
     id: WCHS0000
     image: /img/basel3.jpg
-    image-alt: 'installation view of art booth at Art Basel, Switzerland '
+    image-alt: "installation view of art booth at Art Basel, Switzerland "
   - artwork-title: Installation View
     id: WCHS0001
     image: /img/basel1.jpg
-    image-alt: 'installation view of art booth at Art Basel, Switzerland '
+    image-alt: "installation view of art booth at Art Basel, Switzerland "
   - artwork-title: Installation View
     id: WCHS0002
     image: /img/basel2.jpg
-    image-alt: 'installation view of art booth at Art Basel, Switzerland '
+    image-alt: "installation view of art booth at Art Basel, Switzerland "
   - artwork-title: Soaked Alois
     id: WCHS0003
     image: /img/basel6.jpg
     image-alt: artwork image – collage and pigment print on shaped panel
-  - artwork-title: 'Foreclosed '
+  - artwork-title: "Foreclosed "
     id: WCHS0004
     image: /img/basel4.jpg
     image-alt: artwork image – collage and pigment print on shaped panel
@@ -34,8 +35,8 @@ exhibition-images:
   - artwork-title: Kate
     id: WCHS0007
     image: /img/basel15.jpg
-    image-alt: 'artwork image – collage on ceramic sculpture '
-  - artwork-title: 'Kate '
+    image-alt: "artwork image – collage on ceramic sculpture "
+  - artwork-title: "Kate "
     id: WCHS0008
     image: /img/basel17.jpg
     image-alt: artwork image – collage on ceramic sculpture – alternate view
@@ -46,10 +47,9 @@ exhibition-images:
   - artwork-title: Erin
     id: WCHS0010
     image: /img/basel12.jpg
-    image-alt: 'artwork image – collage on ceramic sculpture – alt view '
+    image-alt: "artwork image – collage on ceramic sculpture – alt view "
   - artwork-title: Indigo Rain Cave
     id: WCHS0011
     image: /img/basel13.jpg
     image-alt: artwork image – collage on ceramic sculpture
 ---
-
