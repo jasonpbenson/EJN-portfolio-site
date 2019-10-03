@@ -1,18 +1,37 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import Layout from "../components/Layout"
+
 export default function ExhibitionTemplate({ data, pageContext }) {
   console.log(pageContext)
   const exhibition = data.markdownRemark
+  const images = exhibition.frontmatter.exhibition_images
   console.log(exhibition)
   return (
-    <div className="headers-container">
-      <div className="title-container">
-        <h1>{exhibition.frontmatter.title}</h1>
-      </div>
-      <h1>IMAGES</h1>
-      <h2></h2>
-    </div>
+    <Layout>
+      <section className="exhibition-info">
+        <header>
+          <h1>{exhibition.frontmatter.title}</h1>
+        </header>
+        <nav>
+          <h2>IMAGES</h2>
+        </nav>
+        <aside>{exhibition.frontmatter.year}</aside>
+      </section>
+      <section className="exhibition-images">
+        <div className="exhibition-images-container">
+          {images.map(entry => {
+            return (
+              <div key={entry.id}>
+                <p>{entry.artwork_title}</p>
+                <img src={entry.image} alt={entry.image_alt} />
+              </div>
+            )
+          })}
+        </div>
+      </section>
+    </Layout>
   )
 }
 

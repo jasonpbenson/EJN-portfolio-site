@@ -1,13 +1,26 @@
 import React from "react"
+import { graphql } from "gatsby"
 // import { Link, graphql } from "gatsby"
 // import { Helmet } from "react-helmet"
 
-import ExhibitionList from "../components/ExhibitionList"
+import Layout from "../components/Layout"
 
-export default function Index() {
+export default function Index({ data }) {
   return (
-    <div>
-      <ExhibitionList />
-    </div>
+    <Layout>
+      <main>
+        <h1 className="landing-header">{data.site.siteMetadata.title}</h1>
+      </main>
+    </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
