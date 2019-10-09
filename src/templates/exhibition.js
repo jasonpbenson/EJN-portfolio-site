@@ -18,6 +18,7 @@ export default function ExhibitionTemplate({ data, pageContext }) {
           <h2>IMAGES</h2>
         </nav>
         <aside>{exhibition.frontmatter.year}</aside>
+        <aside>{exhibition.frontmatter.venue}</aside>
       </section>
       <section className="exhibition-images">
         <div className="exhibition-images-container">

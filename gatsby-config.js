@@ -11,15 +11,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages/markdown/exhibition-pages-data`,
-        name: "markdown-exhibition-data",
+        path: `${__dirname}/src/pages/markdown/exhibitions`,
+        name: "markdown-exhibitions",
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages/markdown/information-pages-data`,
-        name: "markdown-page-data",
+        path: `${__dirname}/src/pages/markdown/pages`,
+        name: "markdown-pages",
       },
     },
     {
@@ -29,6 +29,13 @@ module.exports = {
         name: `image-uploads`,
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    "gatsby-plugin-styled-components",
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
