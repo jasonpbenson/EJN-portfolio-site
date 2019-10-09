@@ -25,7 +25,7 @@ const exhibitionList = ({ data }) => {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/exhibition-pages-data/" } }
+      filter: { fileAbsolutePath: { regex: "/exhibitions/" } }
     ) {
       edges {
         node {

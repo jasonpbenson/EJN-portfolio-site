@@ -12,14 +12,14 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages/markdown/exhibitions`,
-        name: "markdown-exhibitions",
+        name: "exhibitions",
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages/markdown/pages`,
-        name: "markdown-pages",
+        path: `${__dirname}/src/pages/markdown/page-data`,
+        name: "page-data",
       },
     },
     {
@@ -29,6 +29,7 @@ module.exports = {
         name: `image-uploads`,
       },
     },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

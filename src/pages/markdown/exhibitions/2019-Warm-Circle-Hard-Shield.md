@@ -1,4 +1,5 @@
 ---
+templateKey: exhibition
 title: "Warm Circle, Hard Shield"
 venue: Art Basel
 year: "2019"

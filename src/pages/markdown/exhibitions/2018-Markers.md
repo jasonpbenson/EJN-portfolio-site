@@ -1,4 +1,5 @@
 ---
+templateKey: exhibition
 title: Markers
 venue: "Various Locations "
 year: "2018"

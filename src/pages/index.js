@@ -4,10 +4,9 @@ import { graphql } from "gatsby"
 // import { Helmet } from "react-helmet"
 
 import Layout from "../components/Layout"
-import { typography, headerSub } from "../utils/typography"
+import { headerSub } from "../utils/typography"
 
 export default function Index({ data }) {
-  console.log(typography)
   return (
     <Layout>
       <main>

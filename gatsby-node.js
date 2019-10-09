@@ -15,49 +15,49 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex: "/exhibition-pages-data/" } }
-          sort: { order: ASC, fields: [frontmatter___year] }
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
+  return graphql(`
+    {
+      allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___year] }) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              templateKey
             }
           }
         }
       }
-    `).then(result => {
-      const exhibitions = result.data.allMarkdownRemark.edges
-      exhibitions.forEach(({ node }, index) => {
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve(`./src/templates/exhibition.js`),
-          context: {
-            slug: node.fields.slug,
-            previous: index === 0 ? null : exhibitions[index - 1].node,
-            next:
-              index === exhibitions.length - 1
-                ? null
-                : exhibitions[index + 1].node,
-          },
-        })
+    }
+  `).then(result => {
+    const dataSort = result.data.allMarkdownRemark.edges
+
+    dataSort.forEach(({ node }, index) => {
+      let pathName, component, context
+
+      pathName = node.fields.slug
+      component = path.resolve(
+        `src/templates/${String(node.frontmatter.templateKey)}.js`
+      )
+      if (node.frontmatter.templateKey === "exhibition") {
+        context = {
+          slug: node.fields.slug,
+          previous: index === 0 ? null : dataSort[index - 1].node,
+          next: index === dataSort.length - 1 ? null : dataSort[index + 1].node,
+        }
+      } else {
+        context = {
+          slug: node.fields.slug,
+        }
+      }
+
+      createPage({
+        path: pathName,
+        component: component,
+        context: context,
       })
-      resolve()
     })
   })
 }
-
-//   data.allMarkdownRemark.edges.forEach(edge => {
-//     const slug = edge.node.fields.slug
-//     actions.createPage({
-//       path: slug,
-//       component: exhibitionTemplate,
-//       context: { slug: slug },
-//     })
-//   })
-// }

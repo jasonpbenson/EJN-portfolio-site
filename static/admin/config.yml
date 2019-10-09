@@ -10,7 +10,7 @@ site_url: https://kind-clarke-8528a2.netlify.com/
 slug:
   encoding: "ascii"
   clean_accents: true
-  sanitize_replacement: "-"
+  sanitize_replacement: "_"
 
 collections:
   - label: "Exhibitions"
@@ -19,6 +19,12 @@ collections:
     folder: "src/pages/markdown/exhibitions"
     slug: "{{year}}-{{slug}}"
     fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "exhibition",
+        }
       - {
           label: "Exhibition Title",
           name: "title",
@@ -80,13 +86,21 @@ collections:
   - label: "Pages"
     name: "pages"
     create: true
-    folder: "src/pages/markdown/pages"
+    folder: "src/pages/markdown/page-data"
     slug: "{{slug}}"
     fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "page",
+        }
       - { label: "Page Title", name: "title", widget: "string", required: true }
       - {
-          label: "Page Content",
-          name: "page-content",
-          widget: "markdown",
-          required: true,
+          label: "ID",
+          name: "id",
+          widget: "string",
+          hint: "each entry MUST be unique",
+          default: "page000",
         }
+      - { label: "Body", name: "body", widget: "markdown", required: true }

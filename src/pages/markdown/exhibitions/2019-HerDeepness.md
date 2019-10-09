@@ -1,4 +1,5 @@
 ---
+templateKey: exhibition
 title: HerDeepness
 venue: "Atlanta Contemporary "
 year: "2019"

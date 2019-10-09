@@ -22,10 +22,7 @@ export default () => (
         <nav>
           <ul className="header-menu">
             <li>
-              <Link to="/about">INFORMATION</Link>
-            </li>
-            <li>
-              <Link to="/contact">CONTACT</Link>
+              <Link to="/information/">INFORMATION</Link>
             </li>
           </ul>
         </nav>

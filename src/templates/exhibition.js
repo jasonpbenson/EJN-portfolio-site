@@ -1,32 +1,38 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/Layout"
 
 export default function ExhibitionTemplate({ data, pageContext }) {
-  console.log(pageContext)
+  console.log("context: ", pageContext)
   const exhibition = data.markdownRemark
   const images = exhibition.frontmatter.exhibition_images
   console.log(exhibition)
   return (
     <Layout>
-      <section className="exhibition-info">
+      <section>
         <header>
           <h1>{exhibition.frontmatter.title}</h1>
         </header>
         <nav>
-          <h2>IMAGES</h2>
+          <h2>
+            <a href="#images">IMAGES</a>
+          </h2>
         </nav>
         <aside>{exhibition.frontmatter.year}</aside>
         <aside>{exhibition.frontmatter.venue}</aside>
       </section>
-      <section className="exhibition-images">
-        <div className="exhibition-images-container">
+      <section id="images" style={{ marginTop: "50%", overflow: "scroll" }}>
+        <div>
           {images.map(entry => {
             return (
               <div key={entry.id}>
+                <img
+                  style={{ maxWidth: "50%", marginTop: "10%" }}
+                  src={entry.image}
+                  alt={entry.image_alt}
+                />
                 <p>{entry.artwork_title}</p>
-                <img src={entry.image} alt={entry.image_alt} />
               </div>
             )
           })}
@@ -39,7 +45,7 @@ export default function ExhibitionTemplate({ data, pageContext }) {
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(
-      fileAbsolutePath: { regex: "/exhibition-pages-data/" }
+      fileAbsolutePath: { regex: "/exhibitions/" }
       fields: { slug: { eq: $slug } }
     ) {
       frontmatter {
