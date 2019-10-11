@@ -7,6 +7,5 @@ const typography = new Typography({
   bodyFontFamily: ["Enriqueta", "serif"],
 })
 
-export default typography
-
 export const headerSub = typography.options.headerFontFamily[2]
+export default typography

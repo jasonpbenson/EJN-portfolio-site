@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 
 const exhibitionList = ({ data }) => {
+  console.log(data)
   const exhibitions = data.allMarkdownRemark
   return (
     <Layout>
@@ -26,6 +27,7 @@ export const query = graphql`
   query {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/exhibitions/" } }
+      sort: { fields: frontmatter___year, order: DESC }
     ) {
       edges {
         node {

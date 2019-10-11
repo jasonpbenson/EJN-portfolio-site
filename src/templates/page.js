@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 
-export default function PageTemplate({ data, pageContext }) {
-  console.log("context: ", pageContext)
+const PageTemplate = ({ data, pageContext }) => {
+  console.log("'pages' context: ", pageContext)
   const { markdownRemark: page } = data
 
   return (
@@ -27,3 +27,4 @@ export const query = graphql`
     }
   }
 `
+export default PageTemplate

@@ -1,18 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
-// import { Link, graphql } from "gatsby"
-// import { Helmet } from "react-helmet"
 
 import Layout from "../components/Layout"
-import { headerSub } from "../utils/typography"
+import LandingImage from "../components/LandingImage"
 
-export default function Index({ data }) {
+const Index = ({ data }) => {
+  const imageSet = data.allFile
   return (
     <Layout>
       <main>
-        <h1 className="landing-header">{data.site.siteMetadata.title}</h1>
-        <h2 style={{ fontFamily: `${headerSub}` }}>testing</h2>
-        <p>testing</p>
+        <LandingImage imageSet={imageSet} />
       </main>
     </Layout>
   )
@@ -25,5 +22,19 @@ export const query = graphql`
         title
       }
     }
+    allFile(filter: { absolutePath: { regex: "/web-landing-images/" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+          id
+        }
+      }
+    }
   }
 `
+
+export default Index

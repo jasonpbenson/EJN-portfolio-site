@@ -1,16 +1,18 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
+import ExhibitionNav from "../components/ExhibitionNav"
+import ExhibitionPageTracker from "../components/ExhibitionPageTracker"
 
-export default function ExhibitionTemplate({ data, pageContext }) {
-  console.log("context: ", pageContext)
+const ExhibitionTemplate = ({ data, pageContext }) => {
   const exhibition = data.markdownRemark
   const images = exhibition.frontmatter.exhibition_images
-  console.log(exhibition)
   return (
     <Layout>
       <section>
+        <ExhibitionNav pageContext={pageContext} />
+        <ExhibitionPageTracker pageContext={pageContext} />
         <header>
           <h1>{exhibition.frontmatter.title}</h1>
         </header>
@@ -63,3 +65,4 @@ export const query = graphql`
     }
   }
 `
+export default ExhibitionTemplate

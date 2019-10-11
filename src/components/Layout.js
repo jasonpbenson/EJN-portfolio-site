@@ -2,7 +2,7 @@ import React from "react"
 
 import Header from "../components/Header"
 
-export default ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <Header />
@@ -10,3 +10,5 @@ export default ({ children }) => {
     </>
   )
 }
+
+export default Layout
