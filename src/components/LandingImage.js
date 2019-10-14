@@ -1,13 +1,22 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import flowerSvg from "../assets/images/svg-icons/flower-with-four-petals.svg"
 
 const LandingImage = props => {
   const ImageContainer = styled.div`
     margin: 0 auto;
-    width: 40%;
     min-width: 425px;
+    position: relative;
+    width: 40%;
   `
+  const Svg = styled.img`
+    left: -2%;
+    position: absolute;
+    top: -2%;
+    width: 100%;
+  `
+
   const DisplayRandomLandingImage = () => {
     const imageData = props.imageSet
     if (imageData.edges.length > 0) {
@@ -15,9 +24,9 @@ const LandingImage = props => {
       return (
         <Img
           fluid={imageData.edges[index].node.childImageSharp.fluid}
-          fadeIn="true"
           placeholderStyle={{ display: "none" }}
           alt="artwork detail cutout"
+          imgStyle={{ zIndex: "100" }}
         />
       )
     } else {
@@ -28,6 +37,10 @@ const LandingImage = props => {
   return (
     <ImageContainer>
       <DisplayRandomLandingImage />
+      <Svg
+        src={flowerSvg}
+        alt="flower shape placed behind artwork detail cutout to create greater contrast with background"
+      />
     </ImageContainer>
   )
 }
