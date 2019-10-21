@@ -77,6 +77,7 @@ const Header = () => {
         font-size: 40px;
       }
     }
+    background-color: #d9d8d850;
     align-items: flex-end;
     justify-content: space-between;
     display: flex;
