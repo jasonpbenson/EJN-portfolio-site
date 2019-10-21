@@ -1,0 +1,34 @@
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="181.221"
+        height="20"
+        viewBox="0 0 181.221 33"
+      >
+        <g id="Group_51" data-name="Group 51" transform="translate(-1353 -147)">
+          <g
+            id="Ellipse_29"
+            data-name="Ellipse 29"
+            transform="translate(1427.537 147)"
+            fill="#8493bf50"
+          >
+            <circle cx="16.5" cy="16.5" r="16.5" stroke="none" />
+            <circle cx="16.5" cy="16.5" r="16" fill="none" />
+          </g>
+          <g id="sun-flare-svgrepo-com" transform="translate(1353 7.171)">
+            <path
+              id="Path_26"
+              data-name="Path 26"
+              d="M279.113,254.489a7.681,7.681,0,0,0-7.037,4.608H233.314a3.072,3.072,0,0,0,0,6.145h38.761a7.681,7.681,0,1,0,7.038-10.753Z"
+              transform="translate(-105.575 -105.591)"
+              fill="#8493bf50"
+            />
+            <path
+              id="Path_27"
+              data-name="Path 27"
+              d="M53.48,259.1H14.719a7.681,7.681,0,1,0,0,6.145H53.481a3.072,3.072,0,1,0,0-6.145Z"
+              transform="translate(0 -105.592)"
+              fill="#8493bf50"
+            />
+          </g>
+        </g>
+      </svg>

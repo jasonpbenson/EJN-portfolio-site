@@ -1,16 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
-
-import Layout from "../components/Layout"
+import styled from "styled-components"
 
 const PageTemplate = ({ data, pageContext }) => {
-  console.log("'pages' context: ", pageContext)
+  // console.log("'pages' context: ", pageContext)
   const { markdownRemark: page } = data
 
+  const PageStyles = styled.div`
+    text-align: right;
+  `
+
   return (
-    <Layout>
-      <div dangerouslySetInnerHTML={{ __html: page.html }}></div>
-    </Layout>
+    <>
+      <PageStyles>
+        <div dangerouslySetInnerHTML={{ __html: page.html }}></div>
+      </PageStyles>
+    </>
   )
 }
 

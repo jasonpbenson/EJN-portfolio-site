@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
 import ExhibitionNav from "../components/ExhibitionNav"
 import ExhibitionPageTracker from "../components/ExhibitionPageTracker"
 
@@ -9,7 +8,7 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
   const exhibition = data.markdownRemark
   const images = exhibition.frontmatter.exhibition_images
   return (
-    <Layout>
+    <>
       <section>
         <ExhibitionNav pageContext={pageContext} />
         <ExhibitionPageTracker pageContext={pageContext} />
@@ -40,7 +39,7 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
           })}
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
 

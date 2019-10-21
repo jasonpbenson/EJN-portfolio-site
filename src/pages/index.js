@@ -1,17 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
 import LandingImage from "../components/LandingImage"
 
 const Index = ({ data }) => {
   const imageSet = data.allFile
   return (
-    <Layout>
-      <main>
-        <LandingImage imageSet={imageSet} />
-      </main>
-    </Layout>
+    <main>
+      <LandingImage imageSet={imageSet} />
+    </main>
   )
 }
 

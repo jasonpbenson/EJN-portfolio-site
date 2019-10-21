@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 const ExhibitionNav = props => {
   // props = page context, passed from exhibition template
   const data = props.pageContext
-  console.log(data)
 
   // swap out 'previous' icon based on current page context
   function PreviousPage() {
@@ -18,8 +18,7 @@ const ExhibitionNav = props => {
           data-name="Link to previous page"
           d="M53.48,259.1H14.719a7.681,7.681,0,1,0,0,6.145H53.481a3.072,3.072,0,1,0,0-6.145Z"
           transform="translate(0 -105.592)"
-          fill="#8493bf"
-          opacity=".5"
+          fill="#8493bf50"
         />
       )
     } else {
@@ -38,7 +37,7 @@ const ExhibitionNav = props => {
     }
   }
 
-  // swap out 'Next' icon based on current page context
+  // swap out 'next' icon based on current page context
   function NextPage() {
     if (data.next === null) {
       return (
@@ -47,8 +46,7 @@ const ExhibitionNav = props => {
           data-name="Link to next page"
           d="M279.113,254.489a7.681,7.681,0,0,0-7.037,4.608H233.314a3.072,3.072,0,0,0,0,6.145h38.761a7.681,7.681,0,1,0,7.038-10.753Z"
           transform="translate(-105.575 -105.591)"
-          fill="#8493bf"
-          opacity=".5"
+          fill="#8493bf50"
         />
       )
     } else {
@@ -66,8 +64,16 @@ const ExhibitionNav = props => {
       )
     }
   }
+
+  const SvgContainer = styled.div`
+    position: fixed;
+    height: fit-content;
+    right: 8%;
+    top: 15%;
+  `
+
   return (
-    <>
+    <SvgContainer>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="20"
@@ -89,7 +95,7 @@ const ExhibitionNav = props => {
           </g>
         </g>
       </svg>
-    </>
+    </SvgContainer>
   )
 }
 

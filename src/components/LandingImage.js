@@ -5,15 +5,16 @@ import flowerSvg from "../assets/images/svg-icons/flower-with-four-petals.svg"
 
 const LandingImage = props => {
   const ImageContainer = styled.div`
-    margin: 0 auto;
+    margin: 5% auto;
+    max-width: 512px;
     min-width: 425px;
     position: relative;
-    width: 40%;
+    width: 35%;
   `
   const Svg = styled.img`
-    left: -2%;
+    left: 0;
     position: absolute;
-    top: -2%;
+    top: -1%;
     width: 100%;
   `
 
