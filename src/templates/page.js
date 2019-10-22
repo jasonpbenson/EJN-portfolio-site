@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import typography from "../utils/typography"
 
-import infoPageImage from "../assets/images/info-image.png"
+import infoPageImage from "../assets/images/info-page-image.png"
 
 const PageTemplate = ({ data }) => {
   const { markdownRemark: page } = data
