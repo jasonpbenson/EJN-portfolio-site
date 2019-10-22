@@ -20,7 +20,7 @@ export const query = graphql`
         title
       }
     }
-    allFile(filter: { absolutePath: { regex: "/web-landing-images/" } }) {
+    allFile(filter: { relativePath: { regex: "/web-landing-images/" } }) {
       edges {
         node {
           childImageSharp {
