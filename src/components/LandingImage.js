@@ -4,6 +4,7 @@ import styled from "styled-components"
 import flowerSvg from "../assets/images/svg-icons/flower-with-four-petals.svg"
 
 const LandingImage = props => {
+  console.log(props)
   const ImageContainer = styled.div`
     margin: 12% auto;
     max-width: 512px;
@@ -25,8 +26,9 @@ const LandingImage = props => {
       return (
         <Img
           fluid={imageData.edges[index].node.childImageSharp.fluid}
+          src={imageData.edges[index].node.childImageSharp.fluid.src}
           placeholderStyle={{ display: "none" }}
-          alt="artwork detail cutout"
+          alt="artwork detail"
           imgStyle={{ zIndex: "100" }}
         />
       )

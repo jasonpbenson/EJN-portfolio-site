@@ -5,6 +5,7 @@ import LandingImage from "../components/LandingImage"
 
 const Index = ({ data }) => {
   const imageSet = data.allFile
+  console.log(imageSet)
   return (
     <main>
       <LandingImage imageSet={imageSet} />
