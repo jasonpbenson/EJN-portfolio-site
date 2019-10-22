@@ -24,6 +24,11 @@ const LandingImage = props => {
     if (imageData.edges.length > 0) {
       let index = Math.floor(Math.random() * Math.floor(imageData.edges.length))
       return (
+        // <img
+        //   src={imageData.edges[index].node.childImageSharp.fluid.src}
+        //   alt="artwork detail"
+        //   style={{ zIndex: "100", position: "relative" }}
+        // />
         <Img
           fluid={imageData.edges[index].node.childImageSharp.fluid}
           src={imageData.edges[index].node.childImageSharp.fluid.src}
