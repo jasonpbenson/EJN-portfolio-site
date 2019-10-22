@@ -12,40 +12,33 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
   const exhibition = data.markdownRemark
   const images = exhibition.frontmatter.exhibition_images
 
-  let displayExhibitionInfo = false
-
-  const displayInfoToggle = () => {
-    displayExhibitionInfo = false
-  }
+  const MainContainer = styled.div`
+    display: flex;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  `
 
   const ExhibitionInfoContainer = styled.div`
-  .main-header {
-    color: #ff5912;
-    font-family: ${exhibitionPageHeader};
-    font-size: 50px;
-  }
-  .images-selector {
-    font-family: ${exhibitionPageHeader};
-    font-size: 120px;
-    -webkit-text-fill-color: #d9d8d8;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #2f2c5d;
-  }
-    .images-selector:hover {
-      cursor: pointer;
-      -webkit-text-stroke-color: #ff5912;
+    .main-header {
+      color: #ff5912;
+      font-family: ${exhibitionPageHeader};
+      font-size: 50px;
     }
-    h3{
+    h3 {
       color: #8493bf;
     }
-    display: ${displayExhibitionInfo === true ? "flex" : "none"}
+    display: flex;
     flex-direction: column;
-    height: 80vh;
     justify-content: center;
+    left: 5%;
     margin: 0 auto;
+    position: fixed;
     text-align: center;
     text-transform: uppercase;
-    width: 40%;
+    top: 30%;
+    width: 20%;
   `
   const ExhibitionImagesContainer = styled.div`
     div {
@@ -53,13 +46,14 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
       display: flex;
       flex-flow: column;
       justify-content: flex-start;
-      margin: 0 auto 2rem auto;
-      width: 80%;
+      margin: 5% auto;
+      width: 50%;
     }
     p {
       font-style: italic;
       font-weight: 600;
-      text-align: center;
+      text-align: left;
+      width: 600;
     }
     img {
       max-width: 600px;
@@ -67,32 +61,28 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
     ::-webkit-scrollbar {
       display: none;
     }
+    align-content: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    padding-bottom: 10%;
-    overflow-x: hidden;
+    height: 100%;
     overflow-y: scroll;
-    width: 100vw;
+    padding: 4% 0 4% 10%;
+    position: fixed;
+    width: 100%;
   `
   return (
-    <div>
+    <MainContainer>
       <ExhibitionNav pageContext={pageContext} />
       <ExhibitionPageTracker pageContext={pageContext} />
       <ExhibitionInfoContainer>
         <header>
           <h1 className="main-header">{exhibition.frontmatter.title}</h1>
-        </header>
-        <nav>
           <h3>
             {exhibition.frontmatter.venue} {exhibition.frontmatter.year}
           </h3>
-          <h1 className="images-selector" onClick={displayInfoToggle()}>
-            images
-          </h1>
-        </nav>
+        </header>
       </ExhibitionInfoContainer>
-      <ExhibitionImagesContainer>
+      <ExhibitionImagesContainer id="exhibition-images">
         {images.map(entry => {
           return (
             <div key={entry.id}>
@@ -102,7 +92,7 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
           )
         })}
       </ExhibitionImagesContainer>
-    </div>
+    </MainContainer>
   )
 }
 

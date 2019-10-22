@@ -39,7 +39,7 @@ const ExhibitionPageTracker = props => {
     height: fit-content;
     position: fixed;
     right: 8%;
-    top: 22%;
+    top: 30%;
   `
   return (
     <SvgContainer>

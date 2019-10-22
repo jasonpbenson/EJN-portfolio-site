@@ -8,10 +8,10 @@ id: page001
 
 b.1989 Lives and works in Atlanta, GA
 
-Co-Director at [Species](http://inter-species.us/)
+Co-Director at <a href="http://inter-species.us/" target="_blank">Species</a>
 
-Represented by [Chapter](https://chapter-ny.com/), NYC and
-[DOCUMENT](http://documentspace.com/), Chicago
+Represented by <a href="https://chapter-ny.com/" target="_blank">Chapter</a>, NYC and
+<a href="http://documentspace.com/" target="_blank">DOCUMENT</a>, Chicago
 
 ### EDUCATION
 

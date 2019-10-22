@@ -48,42 +48,43 @@ const Header = () => {
       color: inherit;
       text-decoration: none;
     }
-    a : hover{
-      color: #ff5912
+    a: hover {
+      color: #ff5912;
     }
-    .header-column-1{
+    .header-column-1 {
       text-align: right;
       h1 {
         color: #2f2c5d;
         font-size: 24px;
       }
       h2 {
-        color: ${
-          window.location.pathname === "/information/" ? "#ff5912" : "#8493bf"
-        };
+        color: ${window.location.pathname === "/information/"
+          ? "#ff5912"
+          : "#8493bf"};
         font-size: 20px;
       }
     }
-    .header-column-2{;
+    .header-column-2 {
       text-transform: lowercase;
       h2 {
-        color: ${
-          window.location.pathname === "/exhibition-list"
-            ? "#ff5912"
-            : exhibitionSlugs.includes(window.location.pathname)
-            ? "#ff5912"
-            : "#8493bf"
-        };
+        color: ${window.location.pathname === "/exhibition-list"
+          ? "#ff5912"
+          : exhibitionSlugs.includes(window.location.pathname)
+          ? "#ff5912"
+          : "#8493bf"};
         font-size: 40px;
       }
     }
-    background-color: #d9d8d850;
     align-items: flex-end;
-    justify-content: space-between;
+    background-image: linear-gradient(#d9d8d8 60%, #d9d8d850, #d9d8d800);
     display: flex;
-    flex-flow: column wrap
-    height: 50px;
-    margin: 2% 6%;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding: 1rem 4rem 3rem 4rem;
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
   `
   return (
     <HeaderContainer>

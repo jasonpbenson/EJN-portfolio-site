@@ -36,21 +36,14 @@ const exhibitionList = ({ data }) => {
     height: fit-content;
     position: fixed;
     right: 14%;
-    top: 22%;
+    top: 30%;
     width: 80%;
-  `
-
-  const ImgContainer = styled.div`
-    position: fixed;
-    height: fit-content;
-    right: 8%;
-    top: 15%;
   `
 
   const exhibitions = data.allMarkdownRemark
   return (
     <ExhibitionListStyles>
-      <ImgContainer>
+      <div>
         <img
           src={navIcon}
           alt="exhibition pages navigation icon"
@@ -58,11 +51,11 @@ const exhibitionList = ({ data }) => {
             position: "fixed",
             height: "fit-content",
             right: "8%",
-            top: "15%",
+            top: "18%",
             width: "109.828px",
           }}
         />
-      </ImgContainer>
+      </div>
       <ul>
         {exhibitions.edges.map(({ node }) => {
           return (

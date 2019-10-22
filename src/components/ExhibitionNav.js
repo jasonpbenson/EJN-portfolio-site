@@ -69,7 +69,8 @@ const ExhibitionNav = props => {
     position: fixed;
     height: fit-content;
     right: 8%;
-    top: 15%;
+    top: 18%;
+    z-index: 200;
   `
 
   return (
