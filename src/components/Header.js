@@ -1,14 +1,20 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 
 import { globalHistory } from "@reach/router"
 
-globalHistory.listen(({ location }) => {
-  console.log("location changed", location)
-})
-
 const Header = () => {
+  const [location, newLocation] = useState("/")
+
+  useEffect(() => {
+    globalHistory.listen(({ location }) => {
+      return newLocation(location.pathname)
+    })
+  })
+
+  console.log(location)
+
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -58,18 +64,16 @@ const Header = () => {
         font-size: 24px;
       }
       h2 {
-        color: ${window.location.pathname === "/information/"
-          ? "#ff5912"
-          : "#8493bf"};
+        color: ${location === "/information/" ? "#ff5912" : "#8493bf"};
         font-size: 20px;
       }
     }
     .header-column-2 {
       text-transform: lowercase;
       h2 {
-        color: ${window.location.pathname === "/exhibition-list"
+        color: ${location === "/exhibition-list"
           ? "#ff5912"
-          : exhibitionSlugs.includes(window.location.pathname)
+          : exhibitionSlugs.includes(location)
           ? "#ff5912"
           : "#8493bf"};
         font-size: 40px;
