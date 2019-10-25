@@ -36,8 +36,9 @@ const exhibitionList = ({ data }) => {
     height: fit-content;
     position: fixed;
     right: 14%;
+    text-align: right;
     top: 30%;
-    width: 80%;
+    width: 90%;
     @media screen and (max-width: 899px) {
       top: 20%;
     }
@@ -49,6 +50,13 @@ const exhibitionList = ({ data }) => {
         font-size: 5vw;
       }
       top: 25%;
+    }
+    @media screen and (max-width: 414px);
+    li {
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-size: 18pt;
     }
   `
   const NavIconStyles = styled.img`

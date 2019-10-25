@@ -8,7 +8,7 @@ const typography = new Typography({
     { name: "Anton", styles: ["Regular"] },
     { name: "Enriqueta", styles: ["Regular"] },
   ],
-  headerFontFamily: ["Archivo Black", "sans-serif", "Anton", "sans-ferif"],
+  headerFontFamily: ["Archivo Black", "sans-serif", "Anton", "sans-serif"],
   bodyFontFamily: ["Enriqueta", "serif"],
 })
 

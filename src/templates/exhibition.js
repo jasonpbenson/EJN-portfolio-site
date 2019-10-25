@@ -133,7 +133,7 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
     }
     @media screen and (max-width: 414px) {
       p {
-        font-size: 14px;
+        font-size: 11pt;
       }
       padding-bottom: 30%;
       padding-top: 50%;
@@ -142,7 +142,7 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
       padding-top: 70%;
     }
     @media screen and (min-height: 1024px) {
-      padding-top: 18%;
+      padding-top: 12%;
     }
   `
   return (

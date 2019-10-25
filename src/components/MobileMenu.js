@@ -65,6 +65,7 @@ const MobileMenu = props => {
       left: 0;
       padding-top: 30vw;
       position: fixed;
+      text-align: right;
       top: 0;
       transform: ${props.displayMobileMenu
         ? "translate3d(0vw,0,0)"
@@ -76,10 +77,20 @@ const MobileMenu = props => {
       z-index: 100;
     }
     @media screen and (max-width: 414px) {
-      img {
-        padding-top: 30%;
+      h1 {
+        font-size: 20pt;
+        margin-left: 35%;
+        margin-bottom: 28px;
       }
-      padding-top: 50%;
+      img {
+        padding-top: 40%;
+      }
+      padding-top: 45%;
+    }
+    @media screen and (max-width: 320px) {
+      h1 {
+        margin-left: 30%;
+      }
     }
   `
   return (

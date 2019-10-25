@@ -50,7 +50,7 @@ const MobileHeader = props => {
         color: inherit;
       }
       header {
-        text-align: justify;
+        text-align: center;
         width: 100%;
       }
       h1 {
@@ -86,11 +86,24 @@ const MobileHeader = props => {
       z-index: 300;
     }
     @media screen and (max-width: 414px) {
+      h1 {
+        font-size: 21.5pt;
+      }
       h2 {
+        font-size: 18pt;
         top: 11%;
       }
       height: 18%;
       padding-top: 8%;
+    }
+    @media screen and (max-width: 320px) {
+      h1 {
+        font-size: 18pt;
+      }
+      img {
+        margin-left: 4%;
+        width: 20%;
+      }
     }
   `
 
