@@ -77,7 +77,7 @@ const Header = () => {
       }
     }
     align-items: flex-end;
-    background-image: linear-gradient(#d9d8d8 80%, #d9d8d850, #d9d8d800);
+    background-image: linear-gradient(#d9d8d8 50%, #d9d8d800);
     display: flex;
     flex-direction: column;
     flex-flow: wrap;
@@ -100,14 +100,14 @@ const Header = () => {
           font-size: 3vw;
         }
       }
-      background-image: linear-gradient(#d9d8d8 80%, #d9d8d850, #d9d8d800);
+      background-image: linear-gradient(#d9d8d8 50%, #d9d8d800);
       padding: 1rem 4rem 2rem 4rem;
-    }
-    @media screen and (max-width: 679px) {
-      display: none;
     }
     @media screen and (min-height: 1024px) {
       padding: 2rem 4rem 4rem 4rem;
+    }
+    @media screen and (max-width: 679px) {
+      display: none;
     }
   `
   return (
