@@ -76,6 +76,9 @@ const ExhibitionNav = props => {
       transform: scale(0.8);
       z-index: 200;
     }
+    @media screen and (max-width: 414px) {
+      display: none;
+    }
   `
 
   return (

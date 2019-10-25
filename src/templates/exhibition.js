@@ -72,7 +72,7 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
       z-index: 1;
     }
     @media screen and (max-width: 414px) {
-      top: 25%;
+      top: 18%;
     }
   `
   const ExhibitionImagesContainer = styled.div`
@@ -136,7 +136,7 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
         font-size: 14px;
       }
       padding-bottom: 30%;
-      padding-top: 65%;
+      padding-top: 50%;
     }
     @media screen and (max-width: 414px) and (min-height: 800px) {
       padding-top: 70%;
