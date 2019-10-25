@@ -66,7 +66,7 @@ const PageTemplate = ({ data }) => {
       padding: 15% 5% 20% 5%;
     }
     @media screen and (max-width: 414px) {
-      padding: 30% 5%;
+      padding: 30% 8%;
     }
   `
 

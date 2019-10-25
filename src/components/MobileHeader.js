@@ -87,11 +87,15 @@ const MobileHeader = props => {
     }
     @media screen and (max-width: 414px) {
       h1 {
-        font-size: 21.5pt;
+        font-size: 20pt;
       }
       h2 {
         font-size: 18pt;
         top: 11%;
+      }
+      img {
+        margin-left: 4%;
+        width: 20%;
       }
       height: 18%;
       padding-top: 8%;
