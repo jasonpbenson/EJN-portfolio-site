@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
-
 import { globalHistory } from "@reach/router"
 
 const Header = () => {
@@ -12,8 +11,6 @@ const Header = () => {
       return newLocation(location.pathname)
     })
   })
-
-  console.log(location)
 
   const data = useStaticQuery(graphql`
     query {
@@ -61,11 +58,11 @@ const Header = () => {
       text-align: right;
       h1 {
         color: #2f2c5d;
-        font-size: 24px;
+        font-size: 2vw;
       }
       h2 {
         color: ${location === "/information/" ? "#ff5912" : "#8493bf"};
-        font-size: 20px;
+        font-size: 1.5vw;
       }
     }
     .header-column-2 {
@@ -76,19 +73,42 @@ const Header = () => {
           : exhibitionSlugs.includes(location)
           ? "#ff5912"
           : "#8493bf"};
-        font-size: 40px;
+        font-size: 2.5vw;
       }
     }
     align-items: flex-end;
-    background-image: linear-gradient(#d9d8d8 60%, #d9d8d850, #d9d8d800);
+    background-image: linear-gradient(#d9d8d8 80%, #d9d8d850, #d9d8d800);
     display: flex;
     flex-direction: column;
     flex-flow: wrap;
     justify-content: space-between;
-    padding: 1rem 4rem 3rem 4rem;
+    padding: 1rem 4rem 1.6rem 4rem;
     position: fixed;
     width: 100vw;
-    z-index: 1000;
+    z-index: 100;
+    @media screen and (max-width: 900px) {
+      .header-column-1 {
+        h1 {
+          font-size: 2.6vw;
+        }
+        h2 {
+          font-size: 2vw;
+        }
+      }
+      .header-column-2 {
+        h2 {
+          font-size: 3vw;
+        }
+      }
+      background-image: linear-gradient(#d9d8d8 80%, #d9d8d850, #d9d8d800);
+      padding: 1rem 4rem 2rem 4rem;
+    }
+    @media screen and (max-width: 679px) {
+      display: none;
+    }
+    @media screen and (min-height: 1024px) {
+      padding: 2rem 4rem 4rem 4rem;
+    }
   `
   return (
     <HeaderContainer>

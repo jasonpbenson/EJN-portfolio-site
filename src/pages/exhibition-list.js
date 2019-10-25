@@ -38,23 +38,37 @@ const exhibitionList = ({ data }) => {
     right: 14%;
     top: 30%;
     width: 80%;
+    @media screen and (max-width: 899px) {
+      top: 20%;
+    }
+    @media screen and (max-width: 679px) {
+      top: 30%;
+    }
+    @media screen and (max-width: 499px) {
+      h2 {
+        font-size: 5vw;
+      }
+      top: 25%;
+    }
+  `
+  const NavIconStyles = styled.img`
+    position: fixed;
+    height: fit-content;
+    right: 8%;
+    top: 14%;
+    width: 109.828px;
+    @media screen and (max-width: 679px) {
+      top: 19vw;
+      transform: scale(0.8);
+      z-index: 200;
+    }
   `
 
   const exhibitions = data.allMarkdownRemark
   return (
     <ExhibitionListStyles>
       <div>
-        <img
-          src={navIcon}
-          alt="exhibition pages navigation icon"
-          style={{
-            position: "fixed",
-            height: "fit-content",
-            right: "8%",
-            top: "18%",
-            width: "109.828px",
-          }}
-        />
+        <NavIconStyles src={navIcon} alt="exhibition pages navigation icon" />
       </div>
       <ul>
         {exhibitions.edges.map(({ node }) => {

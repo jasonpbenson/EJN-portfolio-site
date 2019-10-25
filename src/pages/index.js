@@ -2,13 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import LandingImage from "../components/LandingImage"
+import MobileLandingImage from "../components/MobileLandingImage"
 
 const Index = ({ data }) => {
   const imageSet = data.allFile
-  console.log(imageSet)
   return (
     <main>
       <LandingImage imageSet={imageSet} />
+      <MobileLandingImage />
     </main>
   )
 }

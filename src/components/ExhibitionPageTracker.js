@@ -40,6 +40,13 @@ const ExhibitionPageTracker = props => {
     position: fixed;
     right: 8%;
     top: 30%;
+    z-index: 200;
+    @media screen and (max-width: 900px) {
+      top: 20%;
+    }
+    @media screen and (max-width: 679px) {
+      display: none;
+    }
   `
   return (
     <SvgContainer>

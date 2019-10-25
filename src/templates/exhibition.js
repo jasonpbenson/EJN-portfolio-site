@@ -13,32 +13,67 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
   const images = exhibition.frontmatter.exhibition_images
 
   const MainContainer = styled.div`
-    display: flex;
     height: 100vh;
     position: fixed;
     top: 0;
     width: 100vw;
+    @media screen and (max-width: 679px) {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+    }
   `
 
   const ExhibitionInfoContainer = styled.div`
-    .main-header {
+    h1 {
       color: #ff5912;
       font-family: ${exhibitionPageHeader};
-      font-size: 50px;
+      font-size: 3vw;
+      margin-bottom: 0;
+      text-transform: uppercase;
     }
-    h3 {
+    h2 {
       color: #8493bf;
+      font-size: 1.5vw;
+      margin-bottom: 0;
+      overflow-y: scroll;
     }
+    align-items: center;
+    bottom: 10%;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
+    height: fit-content;
     justify-content: center;
-    left: 5%;
-    margin: 0 auto;
     position: fixed;
-    text-align: center;
-    text-transform: uppercase;
-    top: 30%;
-    width: 20%;
+    right: 7%;
+    text-align: right;
+    width: 25%;
+    z-index: 200;
+    @media screen and (max-width: 900px) {
+      h1 {
+        font-size: 3.8vw;
+      }
+      h2 {
+        font-size: 1.7vw;
+      }
+    }
+    @media screen and (max-width: 679px) {
+      h1 {
+        color: #8493bf;
+        font-size: 7vw;
+      }
+      h2 {
+        font-size: 4.5vw;
+      }
+      top: 30vw;
+      text-align: center;
+      right: 0;
+      width: 100vw;
+      z-index: 1;
+    }
+    @media screen and (max-width: 414px) {
+      top: 25%;
+    }
   `
   const ExhibitionImagesContainer = styled.div`
     div {
@@ -46,29 +81,69 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
       display: flex;
       flex-flow: column;
       justify-content: flex-start;
-      margin: 5% auto;
-      width: 50%;
+      margin-bottom: 2%;
+      width: 55%;
     }
     p {
+      align-self: flex-start;
+      color: #d9d8d8;
+      background: #2f2c5d;
+      font-size: 1.25vw;
       font-style: italic;
-      font-weight: 600;
+      padding: 5px 10px;
       text-align: left;
-      width: 600;
     }
     img {
-      max-width: 600px;
+      margin-bottom: 0.5rem;
+      max-width: 100%;
+      z-index: 200;
     }
     ::-webkit-scrollbar {
       display: none;
     }
-    align-content: center;
-    display: flex;
-    flex-direction: column;
+    background-color: #d9d8d8;
     height: 100%;
+    left: 4%;
     overflow-y: scroll;
-    padding: 4% 0 4% 10%;
     position: fixed;
+    padding-top: 10%;
     width: 100%;
+    @media screen and (max-width: 900px) {
+      div {
+        width: 65%;
+      }
+      p {
+        font-size: 1.6vw;
+      }
+    }
+    @media screen and (max-width: 679px) {
+      div {
+        background-color: #d9d8d8;
+        margin: 0 auto;
+        width: 90%;
+      }
+      p {
+        font-size: 2vw;
+      }
+      background-color: #d9d8d800;
+      left: 0;
+      padding-bottom: 10%;
+      padding-top: 50%;
+      z-index: 100;
+    }
+    @media screen and (max-width: 414px) {
+      p {
+        font-size: 14px;
+      }
+      padding-bottom: 30%;
+      padding-top: 65%;
+    }
+    @media screen and (max-width: 414px) and (min-height: 800px) {
+      padding-top: 70%;
+    }
+    @media screen and (min-height: 1024px) {
+      padding-top: 18%;
+    }
   `
   return (
     <MainContainer>
@@ -76,10 +151,10 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
       <ExhibitionPageTracker pageContext={pageContext} />
       <ExhibitionInfoContainer>
         <header>
-          <h1 className="main-header">{exhibition.frontmatter.title}</h1>
-          <h3>
+          <h1>{exhibition.frontmatter.title}</h1>
+          <h2>
             {exhibition.frontmatter.venue} {exhibition.frontmatter.year}
-          </h3>
+          </h2>
         </header>
       </ExhibitionInfoContainer>
       <ExhibitionImagesContainer id="exhibition-images">

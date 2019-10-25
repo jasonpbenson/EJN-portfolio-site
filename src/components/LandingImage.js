@@ -11,11 +11,24 @@ const LandingImage = props => {
     min-width: 425px;
     position: relative;
     width: 35%;
-    .flower-shape {
-      left: 0;
-      position: absolute;
-      top: -1%;
-      width: 100%;
+    @media screen and (max-width: 900px) {
+      margin: 18% auto;
+      min-width: 350px;
+      width: 40%;
+    }
+    @media screen and (max-width: 679px) {
+      display: none;
+    }
+  `
+
+  const BackingShapeContainer = styled.img`
+    height: auto;
+    left: -1%;
+    position: absolute;
+    top: -1%;
+    width: 100%;
+    @media screen and (max-width: 679px) {
+      display: none;
     }
   `
 
@@ -24,11 +37,6 @@ const LandingImage = props => {
     if (imageData.edges.length > 0) {
       let index = Math.floor(Math.random() * Math.floor(imageData.edges.length))
       return (
-        // <img
-        //   src={imageData.edges[index].node.childImageSharp.fluid.src}
-        //   alt="artwork detail"
-        //   style={{ zIndex: "100", position: "relative" }}
-        // />
         <Img
           fluid={imageData.edges[index].node.childImageSharp.fluid}
           src={imageData.edges[index].node.childImageSharp.fluid.src}
@@ -45,8 +53,7 @@ const LandingImage = props => {
   return (
     <ImageContainer>
       <DisplayRandomLandingImage />
-      <img
-        className="flower-shape"
+      <BackingShapeContainer
         src={flowerSvg}
         alt="flower shape placed behind artwork detail cutout to create greater contrast with background"
       />

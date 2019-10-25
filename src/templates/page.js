@@ -11,53 +11,73 @@ const PageTemplate = ({ data }) => {
   const sectionHeadersFont = typography.options.headerFontFamily[2]
 
   const PageStyles = styled.div`
-    .contact {
-      font-style: italic;
-      font-weight: bold;
-      position: fixed;
-      text-align: center;
-      margin-left: 5%;
-      margin-top: 14%;
-      width: 20%;
+    color: #2f2c5d;
+    position: fixed;
+    width: 100vw;
+    @media screen and (max-width: 679px) {
+      top: 10%;
     }
-    .cv {
-      height: 100vh;
-      overflow-y: scroll;
-      padding: 14% 20% 16% 40%;
-      text-align: left;
-      width: 100%;
+  `
+
+  const ContactStyles = styled.div`
+    img {
+      max-width: 200px;
+      width: 80%;
     }
-    .cv ::-webkit-scrollbar {
+    font-style: italic;
+    font-weight: bold;
+    position: fixed;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 14%;
+    width: fit-content;
+    @media screen and (max-width: 679px) {
       display: none;
     }
-    .cv a {
+  `
+
+  const CvStyles = styled.div`
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 14% 15% 16% 40%;
+    text-align: left;
+    width: 100%;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    a {
       color: #8493bf;
       text-decoration: none;
     }
-    .cva: hover {
+    a: hover {
       color: #ff5912;
     }
-    .cv h3 {
+    h3 {
       color: #ff5912;
       font-family: ${sectionHeadersFont};
     }
-    color: #2f2c5d;
-    display: flex;
-    position: fixed;
-    width: 100vw;
+    ul {
+      list-style-type: none;
+    }
+    @media screen and (max-width: 899px) {
+      padding: 15% 10% 16% 45%;
+    }
+    @media screen and (max-width: 679px) {
+      padding: 15% 5% 20% 5%;
+    }
+    @media screen and (max-width: 414px) {
+      padding: 30% 5%;
+    }
   `
 
   return (
     <>
       <PageStyles>
-        <div className="contact">
+        <ContactStyles>
           <img src={infoPageImage} alt="artwork detail" />
           <p>erinjanenelson@gmail.com</p>
-        </div>
-        <div
-          className="cv"
-          dangerouslySetInnerHTML={{ __html: page.html }}
-        ></div>
+        </ContactStyles>
+        <CvStyles dangerouslySetInnerHTML={{ __html: page.html }}></CvStyles>
       </PageStyles>
     </>
   )

@@ -3,18 +3,26 @@ import styled from "styled-components"
 import anime from "animejs"
 
 const RorschachIconContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  position: fixed;
   bottom: 1%;
-  left: 1%;
-  width: 20%;
+  left: 3%;
+  position: fixed;
+  width: fit-content;
+  @media screen and (max-width: 679px) {
+    display: none;
+  }
 `
 
 const SvgStyles = styled.svg`
-  margin-right: -85px;
+  margin-right: -86px;
   overflow: visible;
   transform: scale(0.5);
+  @media screen and (max-width: 900px) {
+    margin-right: -68px;
+    transform: scale(0.6);
+  }
+  @media screen and (max-width: 679px;) {
+    display: none;
+  }
 `
 const iconAnimations = () => {
   if (window.location.pathname === "/information/") {
@@ -122,9 +130,6 @@ const iconAnimations = () => {
 }
 
 class RorschachIcon extends React.Component {
-  componentDidMount() {
-    iconAnimations()
-  }
   componentDidUpdate() {
     iconAnimations()
   }

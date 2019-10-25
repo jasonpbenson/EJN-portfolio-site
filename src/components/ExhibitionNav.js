@@ -69,8 +69,13 @@ const ExhibitionNav = props => {
     position: fixed;
     height: fit-content;
     right: 8%;
-    top: 18%;
-    z-index: 200;
+    top: 14%;
+    z-index: 300;
+    @media screen and (max-width: 679px) {
+      top: 19vw;
+      transform: scale(0.8);
+      z-index: 200;
+    }
   `
 
   return (
