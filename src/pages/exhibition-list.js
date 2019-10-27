@@ -26,7 +26,6 @@ const exhibitionList = ({ data }) => {
       color: #8493bf;
     }
     svg {
-      margin-bottom: 18px;
       position: fixed;
       right: 8%;
       transform: scale(0.5);

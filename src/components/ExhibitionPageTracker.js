@@ -29,9 +29,10 @@ const ExhibitionPageTracker = props => {
       list-style: none;
     }
     li {
-      display: flex;
       align-items: center;
+      display: flex;
       height: 30px;
+      margin-bottom: 28px;
     }
     svg {
       transform: scale(0.5);
@@ -41,7 +42,7 @@ const ExhibitionPageTracker = props => {
     right: 8%;
     top: 30%;
     z-index: 200;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 899px) {
       top: 20%;
     }
     @media screen and (max-width: 679px) {

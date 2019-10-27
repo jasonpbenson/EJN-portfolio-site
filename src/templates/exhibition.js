@@ -25,63 +25,74 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
   `
 
   const ExhibitionInfoContainer = styled.div`
-    h1 {
-      color: #ff5912;
-      font-family: ${exhibitionPageHeader};
-      font-size: 3vw;
-      margin-bottom: 0;
-      text-transform: uppercase;
-    }
-    h2 {
-      color: #8493bf;
-      font-size: 1.5vw;
-      margin-bottom: 0;
-      overflow-y: scroll;
-    }
     align-items: center;
     bottom: 10%;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     height: fit-content;
     justify-content: center;
     position: fixed;
-    right: 7%;
+    right: 9vw;
     text-align: right;
-    width: 25%;
+    width: 30%;
+    word-break: break-all;
     z-index: 200;
-    @media screen and (max-width: 900px) {
+    h1 {
+      color: #d9d8d8;
+      font-family: ${exhibitionPageHeader};
+      font-size: 5vw;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: #ff5912;
+    }
+    h2 {
+      color: #8493bf;
+      font-size: 1.7vw;
+      margin-bottom: 0;
+      overflow-y: scroll;
+    }
+    @media screen and (max-width: 899px) {
+      bottom: 8%;
+      right: 3vw;
       h1 {
-        font-size: 3.8vw;
+        font-size: 5vw;
       }
       h2 {
         font-size: 1.7vw;
       }
     }
     @media screen and (max-width: 679px) {
-      h1 {
-        color: #8493bf;
-        font-size: 7vw;
-      }
-      h2 {
-        font-size: 4.5vw;
-      }
       top: 30vw;
       text-align: center;
       right: 0;
       width: 100vw;
       z-index: 1;
+      h1 {
+        color: #d9d8d8;
+        font-size: 7vw;
+      }
+      h2 {
+        font-size: 4.5vw;
+      }
     }
     @media screen and (max-width: 414px) {
       top: 18%;
     }
   `
   const ExhibitionImagesContainer = styled.div`
+    background-color: #d9d8d8;
+    height: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    padding-top: 5%;
+    width: 100%;
     div {
       align-items: center;
       display: flex;
       flex-flow: column;
       justify-content: flex-start;
-      margin-bottom: 2%;
+      margin: 2% 0 2% 4%;
       width: 55%;
     }
     p {
@@ -101,16 +112,11 @@ const ExhibitionTemplate = ({ data, pageContext }) => {
     ::-webkit-scrollbar {
       display: none;
     }
-    background-color: #d9d8d8;
-    height: 100%;
-    left: 4%;
-    overflow-y: scroll;
-    position: fixed;
-    padding-top: 10%;
-    width: 100%;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 899px) {
+      padding-top: 7%;
       div {
-        width: 65%;
+        margin-left: 10%;
+        width: 55%;
       }
       p {
         font-size: 1.6vw;

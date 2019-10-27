@@ -34,6 +34,9 @@ const PageTemplate = ({ data }) => {
     @media screen and (max-width: 679px) {
       display: none;
     }
+    @media screen and (min-height: 1024px) {
+      margin-top: 18%;
+    }
   `
 
   const CvStyles = styled.div`
@@ -67,6 +70,9 @@ const PageTemplate = ({ data }) => {
     }
     @media screen and (max-width: 414px) {
       padding: 30% 8%;
+    }
+    @media screen and (min-height: 1024px) {
+      padding-top: 18%;
     }
   `
 
